@@ -30,4 +30,4 @@ void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
 
 ## 🤖 Link al proyecto
 
-    [proyecto]: https://www.tinkercad.com/things/9i6uA1OmOEe-copy-of-ejercicio-4-2/editel?sharecode=JiKHCeYjMAWXr09GrSCSp3lAyFiopx7qNBOvKjX8blA
+    [proyecto](https://www.tinkercad.com/things/9i6uA1OmOEe-copy-of-ejercicio-4-2/editel?sharecode=JiKHCeYjMAWXr09GrSCSp3lAyFiopx7qNBOvKjX8blA)
