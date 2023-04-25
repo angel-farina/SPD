@@ -1,4 +1,4 @@
-Integrantes
+## Integrantes
 
     Aldana Colomer
     Lucía Corbo
@@ -6,13 +6,13 @@ Integrantes
     Angel Farina
     Juan Clemente
 
-Proyecto: Dojo Número Uno 
+## Proyecto: Dojo Número Uno 
 
-Descripción
+## Descripción
 
 En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
 
-Función principal
+## Función principal
 
 Esta funcion se encarga de encender y apagar los leds.
 
@@ -28,6 +28,6 @@ void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
   digitalWrite(B0,estado0);
 }
 
-🤖 Link al proyecto
+## 🤖 Link al proyecto
 
     proyecto
