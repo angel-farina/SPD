@@ -1,0 +1,111 @@
+# https://www.tinkercad.com/things/9i6uA1OmOEe-copy-of-ejercicio-4-2/editel?sharecode=JiKHCeYjMAWXr09GrSCSp3lAyFiopx7qNBOvKjX8blA
+/*
+1- El semáforo tiene que tener 2 leds de cada color como mínimo, 
+en caso de que uno se  rompa. 
+2- Tiene que implementar los tiempos correctos como se detallan 
+a continuación. 
+3- El verde dura 5 segundos. 
+4- El amarillo dura 3 segundos. 
+5- Rojo dura 5 segundos. 
+6- Tiene que tener señalización para personas no videntes como 
+se detalla a  continuación. (Buzzer o piezo)
+7- Durante el rojo: Tiene que sonar 2 vez por segundo en un
+tono FUERTE. 
+*/
+#define LED_ROJO1 13
+#define LED_ROJO2 12
+#define LED_AMARILLO1 11
+#define LED_AMARILLO2 10
+#define LED_VERDE1 9
+#define LED_VERDE2 8
+#define BUZZER_PIN 7 
+
+#define TIEMPO_VERDE 5000
+#define TIEMPO_AMARILLO 3000
+#define TIEMPO_ROJO 5000
+#define TIEMPO_BUZZER 500
+
+void BUZZER_ON(int estado)
+{
+  if (estado == HIGH)
+  {
+  tone(BUZZER_PIN, 1000);
+  }
+  else
+  {
+    noTone(BUZZER_PIN);
+  }
+}
+
+void setup()
+{
+  pinMode(LED_ROJO1, OUTPUT);
+  pinMode(LED_ROJO2, OUTPUT);
+  pinMode(LED_AMARILLO1, OUTPUT);
+  pinMode(LED_AMARILLO2, OUTPUT);
+  pinMode(LED_VERDE1, OUTPUT);
+  pinMode(LED_VERDE2, OUTPUT);
+  pinMode(BUZZER_PIN, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(LED_VERDE1, HIGH);
+  digitalWrite(LED_VERDE2, HIGH);
+  delay(TIEMPO_VERDE);
+  
+  digitalWrite(LED_VERDE1, LOW);
+  digitalWrite(LED_VERDE2, LOW);
+  digitalWrite(LED_AMARILLO1, HIGH);
+  digitalWrite(LED_AMARILLO2, HIGH);
+  delay(TIEMPO_AMARILLO);
+  
+  digitalWrite(LED_AMARILLO1, LOW);
+  digitalWrite(LED_AMARILLO2, LOW);
+  digitalWrite(LED_ROJO1, HIGH);
+  digitalWrite(LED_ROJO2, HIGH);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(HIGH);
+  delay(TIEMPO_BUZZER);
+  BUZZER_ON(LOW);
+  delay(TIEMPO_BUZZER);
+  
+  delay(TIEMPO_ROJO); 
+  digitalWrite(LED_ROJO1, LOW);
+  digitalWrite(LED_ROJO2, LOW);
+}
