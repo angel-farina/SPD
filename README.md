@@ -3,8 +3,8 @@
     Aldana Colomer
     Lucía Corbo
     Di girolamo Matias
-    Angel Farina
     Juan Clemente
+    Angel Farina
 
 ## Proyecto: Dojo Número Uno 
 
