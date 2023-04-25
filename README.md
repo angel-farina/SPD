@@ -1,6 +1,10 @@
 Integrantes
 
-    Esteban Marcelo Quiroz
+    Aldana Colomer
+    Lucía Corbo
+    Di girolamo Matias
+    Angel Farina
+    Juan Clemente
 
 Proyecto: Dojo Número Uno 
 
