@@ -10,22 +10,34 @@
 
 ## Descripción
 
-En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
+1- El semáforo tiene que tener 2 leds de cada color como mínimo, 
+en caso de que uno se  rompa. 
+2- Tiene que implementar los tiempos correctos como se detallan 
+a continuación. 
+3- El verde dura 5 segundos. 
+4- El amarillo dura 3 segundos. 
+5- Rojo dura 5 segundos. 
+6- Tiene que tener señalización para personas no videntes como 
+se detalla a  continuación. (Buzzer o piezo)
+7- Durante el rojo: Tiene que sonar 2 vez por segundo en un
+tono FUERTE. 
 
 ## Función principal
 
-Esta funcion se encarga de encender y apagar los leds.
-
-B0, B1, B2, B3 son #define que utilizamos para agregar los leds, asociandolo a pines de la placa arduino.
+Esta funcion se encarga de asignar el tono que tendra el Buzzer.
 
 (Breve explicación de la función)
 
-void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
+void BUZZER_ON(int estado)
 {
-  digitalWrite(B3,estado3);
-  digitalWrite(B2,estado2);
-  digitalWrite(B1,estado1);
-  digitalWrite(B0,estado0);
+  if (estado == HIGH)
+  {
+  tone(BUZZER_PIN, 1000);
+  }
+  else
+  {
+    noTone(BUZZER_PIN);
+  }
 }
 
 ## 🤖 Link al proyecto
