@@ -1,0 +1,98 @@
+// C++ code
+//entregado
+#define LED_GREEN 12
+#define LED_GREEN_DOS 11	
+#define LED_YELLOW 10
+#define LED_YELLOW_DOS 9
+#define LED_RED 7
+#define LED_RED_DOS 6
+#define SONIDO 2
+#define TITILAR 300
+
+void setup()
+{
+  pinMode(LED_GREEN, OUTPUT);  
+  pinMode(LED_YELLOW, OUTPUT); 
+  pinMode(LED_RED, OUTPUT); 
+  pinMode(LED_GREEN_DOS, OUTPUT);  
+  pinMode(LED_YELLOW_DOS, OUTPUT); 
+  pinMode(LED_RED_DOS, OUTPUT); 
+  pinMode (SONIDO, OUTPUT);
+  
+  Serial.begin(9600);
+}
+
+void loop()
+{ 
+  digitalWrite(LED_GREEN, HIGH);
+  digitalWrite(LED_GREEN_DOS, HIGH );
+  delay(5000);
+  digitalWrite(LED_GREEN, LOW);
+  digitalWrite(LED_GREEN_DOS, LOW );
+  
+  titilarLed(LED_GREEN, LED_GREEN_DOS, TITILAR);
+  
+  digitalWrite(LED_YELLOW, HIGH);
+  digitalWrite(LED_YELLOW_DOS, HIGH );
+  sonar();
+  digitalWrite(LED_YELLOW, LOW);
+  digitalWrite(LED_YELLOW_DOS, LOW );
+  
+  titilarLed(LED_YELLOW, LED_YELLOW_DOS, TITILAR);
+  
+  digitalWrite(LED_RED, HIGH);
+  digitalWrite(LED_RED_DOS, HIGH );
+  delay(5000);
+  digitalWrite(LED_RED, LOW);
+  digitalWrite(LED_RED_DOS, LOW );
+  
+}
+
+void sonar()
+{
+  
+  digitalWrite(SONIDO, HIGH);
+  delay(500);
+  digitalWrite(SONIDO, LOW);
+  delay(500);
+  digitalWrite(SONIDO, HIGH);
+  delay(500);
+  digitalWrite(SONIDO, LOW);
+  delay(500);
+  digitalWrite(SONIDO, HIGH);
+  delay(500);
+  digitalWrite(SONIDO, LOW);
+  delay(500);
+  
+}
+
+void titilarLed(int num1, int num2,int tiempo)
+{
+  digitalWrite(num1, LOW);
+  digitalWrite(num2, LOW );
+  delay(tiempo);
+    
+  digitalWrite(num1, HIGH);
+  digitalWrite(num2, HIGH );
+  delay(tiempo);
+    
+  digitalWrite(num1, LOW);
+  digitalWrite(num2, LOW );
+  delay(tiempo);
+    
+  digitalWrite(num1, HIGH);
+  digitalWrite(num2, HIGH );
+  delay(tiempo);
+    
+  digitalWrite(num1, LOW);
+  digitalWrite(num2, LOW );
+  delay(tiempo);
+    
+  digitalWrite(num1, HIGH);
+  digitalWrite(num2, HIGH );
+  delay(tiempo);
+    
+  digitalWrite(num1, LOW);
+  digitalWrite(num2, LOW );    
+  
+}
