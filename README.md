@@ -28,26 +28,17 @@ Esta funcion se encarga de asignar el tono que tendra el Buzzer.
 
 (Breve explicación de la función)
 
-void BUZZER_ON(int estado)
-{
-  if (estado == HIGH)
-  {
-  tone(BUZZER_PIN, 1000);
-  }
-  else
-  {
-    noTone(BUZZER_PIN);
-  }
-}
-
-void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
-{
-  digitalWrite(B3,estado3);
-  digitalWrite(B2,estado2);
-  digitalWrite(B1,estado1);
-  digitalWrite(B0,estado0);
-}
-
+    void BUZZER_ON(int estado)
+    {
+      if (estado == HIGH)
+      {
+      tone(BUZZER_PIN, 1000);
+      }
+      else
+      {
+        noTone(BUZZER_PIN);
+      }
+    }
 
 ## 🤖 Link al proyecto
 
